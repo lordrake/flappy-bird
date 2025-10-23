@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ff0e75760fec44b4a1a1c4a999d5904
+guid: 47bdbb1b3761d43e2ad229302c345f99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7124756660534886281
-    second: unitytut-birdwingdown_0
+      213: 3702851186854595977
+    second: Bird_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: unitytut-birdwingdown_0
+      name: Bird_01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 194
-        height: 204
+        width: 17
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77048b9d097cf1d90800000000000000
-      internalID: -7124756660534886281
+      spriteID: 98d0a90398b236330800000000000000
+      internalID: 3702851186854595977
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      unitytut-birdwingdown_0: -7124756660534886281
+      Bird_01_0: 3702851186854595977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

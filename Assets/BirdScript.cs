@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidBody;
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
+    private int spriteIndex;
     public float flapStrength;
     public LogicScript logic;
     public bool isBirdAlive = true;
@@ -11,10 +14,15 @@ public class BirdScript : MonoBehaviour
     private float maxYOffset = 17;
     private float minYOffset = -17;
 
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        InvokeRepeating(nameof(animateSprite), 0.15f, 0.15f);
     }
 
     // Update is called once per frame
@@ -36,9 +44,19 @@ public class BirdScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (isBirdAlive)
-        { 
+        {
             logic.gameOver();
             isBirdAlive = false;
         }
+    }
+    
+    private void animateSprite()
+    {
+        spriteIndex++;
+        if (spriteIndex >= sprites.Length)
+        {
+            spriteIndex = 0;
+        }
+        spriteRenderer.sprite = sprites[spriteIndex];
     }
 }
