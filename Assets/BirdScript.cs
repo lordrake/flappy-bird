@@ -16,13 +16,13 @@ public class BirdScript : MonoBehaviour
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        InvokeRepeating(nameof(animateSprite), 0.15f, 0.15f);
+        // InvokeRepeating(nameof(animateSprite), 0.15f, 0.15f);
     }
 
     // Update is called once per frame
