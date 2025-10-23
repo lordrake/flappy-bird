@@ -35,7 +35,10 @@ public class BirdScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.gameOver();
-        isBirdAlive = false;
+        if (isBirdAlive)
+        { 
+            logic.gameOver();
+            isBirdAlive = false;
+        }
     }
 }
