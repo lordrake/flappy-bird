@@ -28,9 +28,19 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isBirdAlive)
+        if ((Keyboard.current.spaceKey.wasPressedThisFrame || Input.GetMouseButtonDown(0)) && isBirdAlive)
         {
             myRigidBody.linearVelocity = Vector2.up * flapStrength;
+            myRigidBody.linearVelocity = Vector2.up * flapStrength;
+        }
+  
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
+            {
+                myRigidBody.linearVelocity = Vector2.up * flapStrength;
+            }
         }
 
         if (myRigidBody.position.y >  maxYOffset || myRigidBody.position.y < minYOffset)
