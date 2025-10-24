@@ -34,7 +34,7 @@ Your goal is simple — **stay in the air** and **avoid the cat paws** for as lo
 - 🌈 **Retro Pixel Art:** 8-bit charm with warm, cozy vibes  
 - 🎵 **Catchy Sound Effects:** Nostalgic and satisfying feedback  
 - 💾 **Score System:** Track your best performance  
-- 🚀 **Unity Powered:** Built with the [Flappy Bird Unity Template](https://github.com/lordrake/flappy-bird)
+- 🚀 **Unity Powered:** Built with Unity
 
 ---
 
