@@ -5,11 +5,18 @@ public class LogicScript : MonoBehaviour
 {
     public int playerScore;
     public Text scoreText;
+    public int powerUpCount = 0;
+
+    public Text powerUpText;
     public GameObject gameOverScreen;
     public GameObject gameStartScreen;
     public AudioSource successSFX;
     public AudioSource gameOverSFX;
     public GameObject playButton;
+
+    public Text hintText;
+
+    public int powerUpGoal = 3;
 
 
     private void Awake()
@@ -22,7 +29,6 @@ public class LogicScript : MonoBehaviour
     {
         playerScore += scoreIncrement;
         scoreText.text = playerScore.ToString();
-        successSFX.Play();
     }
 
     public void restartGame()
@@ -43,7 +49,7 @@ public class LogicScript : MonoBehaviour
         Time.timeScale = 0f;
         
     }
-    
+
     public void Play()
     {
         playerScore = 0;
@@ -51,6 +57,21 @@ public class LogicScript : MonoBehaviour
         playButton.SetActive(false);
         gameStartScreen.SetActive(false);
         Time.timeScale = 1f;
-        
+
+    }
+
+    public void increasePowerUpCount(int increment)
+    {
+        powerUpCount += increment;
+        powerUpText.text = powerUpCount.ToString() + "/" + powerUpGoal;
+
+        Debug.Log(powerUpCount);
+        successSFX.Play();
+    }
+    
+    public void resetPowerUps()
+    {
+        powerUpCount = 0;
+        powerUpText.text = powerUpCount.ToString() + "/" + powerUpGoal;
     }
 }

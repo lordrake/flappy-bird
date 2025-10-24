@@ -135,7 +135,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.97, y: 12.65}
+  m_Size: {x: 3.97, y: 12.3}
   m_EdgeRadius: 0
 --- !u!1 &6277057405117590744
 GameObject:
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a1fde8bcb2e42dfafb3125853cdab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  coin: {fileID: 4388934356454545219, guid: 53943a679425f4e13acd714e4d0efca3, type: 3}
   moveSpeed: 5
   deadZone: -45
 --- !u!1 &7923969114769102802
@@ -413,5 +414,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.82, y: 13.17}
+  m_Size: {x: 3.82, y: 11.5}
   m_EdgeRadius: 0
